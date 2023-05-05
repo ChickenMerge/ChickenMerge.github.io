@@ -18,6 +18,12 @@
 	<!-- Chrome for Android web app tags -->
 	<meta name="mobile-web-app-capable" content="yes" />
 	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
+	<script>
+		window.watch('location', function(attr, _, target) {
+			console.log("--fx--location--", attr, target);
+    	// if(target.indexOf('unwanted url') !== -1) return '#';
+		});
+	</script>
 
 	<script src="patch/js/poki-sdk-v2.js"></script>
     <script src="poki_sitelock.js"></script>
